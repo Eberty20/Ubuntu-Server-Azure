@@ -32,8 +32,8 @@ sudo passwd "user"
 sudo adduser "user" ssl-cert
 
 # Garantir que o xrdp usa a sessão GNOME
-sudo bash -c 'echo "gnome-session" > /home/eberty/.xsession'
-sudo chown eberty:eberty /home/eberty/.xsession
+sudo bash -c 'echo "gnome-session" > /home/user/.xsession'
+sudo chown user:user /home/user/.xsession
 
 # Instalar pacotes de idioma português
 sudo apt-get install language-pack-gnome-pt language-pack-pt-base -y
