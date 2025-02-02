@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Atualizar o sistema
+sudo apt-get update 
+sudo apt-get upgrade 
+
+# Instalar o GNOME Desktop (interface gráfica)
+sudo apt-get install ubuntu-gnome-desktop 
+
+# Instalar o gnome-session e tasksel
+sudo apt-get install gnome-session 
+sudo apt-get install tasksel 
+
+# Instalar o xrdp (acesso via rdp)
+sudo apt-get install xrdp 
+
+# Configurar o xrdp para usar o GNOME
+sudo sed -i 's/port=ask-1/port=3389/g' /etc/xrdp/xrdp.ini
+echo "gnome-session" > ~/.xsession
+sudo systemctl enable xrdp
+sudo systemctl restart xrdp
+
+# Instalar e configurar o GNOME Tweak Tool e extensões
+sudo apt-get install gnome-tweak-tool 
+sudo apt-get install gnome-shell-extensions 
+sudo apt-get install chrome-gnome-shell
+
+# Configurar a senha do usuário
+sudo passwd "user"
+
+# Adicionar o usuário ao grupo de usuários do xrdp
+sudo adduser "user" ssl-cert
+
+# Garantir que o xrdp usa a sessão GNOME
+sudo bash -c 'echo "gnome-session" > /home/eberty/.xsession'
+sudo chown eberty:eberty /home/eberty/.xsession
+
+# Instalar pacotes de idioma português
+sudo apt-get install language-pack-gnome-pt language-pack-pt-base -y
+
+# Configurar o idioma do sistema para português
+sudo update-locale LANG=pt_BR.UTF-8
+sudo locale-gen pt_BR.UTF-8
+sudo dpkg-reconfigure locales
+
+# Reiniciar o serviço do xrdp para aplicar as configurações
+sudo systemctl restart xrdp
+
+# Reiniciar o sistema para aplicar as configurações
+sudo reboot
+
+
