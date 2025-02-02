@@ -1,6 +1,6 @@
 # Ubuntu-Server-Azure
 
-![Imagem do projeto finalizado](Ubuntu-Server-Azure/UbuntuServer.png)
+![Imagem do projeto finalizado](/Ubuntu ServerAzure/UbuntuServer.png)
 
 # Azure Ubuntu Server Setup Guide
 
