@@ -1,6 +1,6 @@
 # Ubuntu-Server-Azure
 
-![Imagem do projeto finalizado](Ubuntu_Server_Azure/Azure.png)
+![Imagem do projeto finalizado](Ubuntu Server Azure/UbuntuServer.png)
 
 # Azure Ubuntu Server Setup Guide
 
@@ -14,7 +14,7 @@ Além disso, será mostrado como configurar a chave SSH para garantir um acesso 
 
 ## Imagem de Referência
 
-![Imagem do projeto finalizado](Ubuntu_Server_Azure/Azure.png)
+![Imagem do projeto finalizado](Ubuntu Server Azure/AZURE.png)
 
 ## Pré-requisitos
 
